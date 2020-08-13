@@ -6,4 +6,14 @@ class CocktailsController < ApplicationController
   def show
   end
 
+  def new
+    @cocktail = Cocktail.new
+  end
+
+  def create
+    c_name = params[:name]
+    @cocktail = Cocktail.new(name: c_name)
+    @cocktail.save
+  end
+
 end
