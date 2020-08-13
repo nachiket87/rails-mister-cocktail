@@ -2,8 +2,11 @@
   This is <%= @cocktail.name %> 
 </div>
 <br>
+
 <div class="d-flex justify-content-center"> 
   <p><%=link_to "Add Dose", new_cocktail_dose_path(@cocktail), class: "btn btn-outline-dark my-2 my-sm-0" %></p>
+</div>
+<div class="d-flex justify-content-center"> 
    <% @cocktail.doses.each do |dose| %>
         <li>
           <%= dose.description %> | <%= dose.ingredient["name"] %> -- <%= link_to dose_path(dose), method: :delete, data: { confirm: "Delete this dose?" } do %>
