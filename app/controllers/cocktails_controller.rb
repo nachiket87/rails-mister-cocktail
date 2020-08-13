@@ -11,9 +11,17 @@ class CocktailsController < ApplicationController
   end
 
   def create
-    c_name = params[:name]
-    @cocktail = Cocktail.new(name: c_name)
+    @cocktail = Cocktail.new(cocktail_params)
     @cocktail.save
+    binding.pry
+
+    redirect_to cocktail_path
+  end
+
+  private
+
+  def cocktail_params
+    params.require(:cocktail).permit(:name)
   end
 
 end
