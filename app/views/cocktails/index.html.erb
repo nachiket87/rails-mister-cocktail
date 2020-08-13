@@ -2,9 +2,14 @@
   <a class="navbar-brand">Mister Cocktail</a>
   <%=link_to "Add Cocktail", new_cocktail_path, class: "btn btn-outline-success my-2 my-sm-0" %>
 </nav>
-<ul>
+<ul style="display: flex;justify-content: space-between; list-style-type: none; text-align: center; margin: 20px 0px;">
 <% @cocktails.each do |cocktail| %>
-  <li> <%=cocktail%></li>
-  
+  <li> 
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title"><%=cocktail.name%></h5>
+          </div>
+        </div>
+  </li>
 <%end%>
 </ul>
