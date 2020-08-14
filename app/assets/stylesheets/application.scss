@@ -12,12 +12,18 @@
 @import "components/index";
 @import "pages/index";
 
+.new_container {
+  margin: 1em;
+}
+
 .main {
-  background-color: #282a36;
-  margin: 0;
-  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0px;
+  grid-auto-rows: minmax(100px, auto);
 }
 
 .test:hover:before {
   content: "Add a Cocktail";
 }
+
