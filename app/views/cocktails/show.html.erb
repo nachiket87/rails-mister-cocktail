@@ -1,5 +1,6 @@
 <div class="d-flex justify-content-center mt-5"> 
   This is <%= @cocktail.name %> 
+  <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
 </div>
 <br>
 
@@ -14,5 +15,7 @@
           <% end %>
         </li>
   <% end %>
+  <p>
   <%=link_to 'Home', root_path %>
+  </p>
 </div>
