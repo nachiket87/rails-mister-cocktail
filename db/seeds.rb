@@ -12,7 +12,7 @@ puts "destroyed ingredients"
 
 URI.open("https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list").each do |f|
   drink = JSON.parse(f)
-  drink["drinks"].first(4).each do |drink|
+  drink["drinks"].first(10).each do |drink|
     Ingredient.create!(name: drink["strIngredient1"])
     puts "added #{drink["strIngredient1"]}"
   end

@@ -15,11 +15,14 @@
 .new_container {
   margin: 1em;
 }
+body {
+  background-color: #44475a;
+}
 
 .main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0px;
+  grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 }
 
