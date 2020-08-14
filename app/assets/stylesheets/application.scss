@@ -11,3 +11,13 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.main {
+  background-color: #282a36;
+  margin: 0;
+  padding: 0;
+}
+
+.test:hover:before {
+  content: "Add a Cocktail";
+}
